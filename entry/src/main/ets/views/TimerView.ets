@@ -27,7 +27,7 @@ export struct TimerView {
       onSelect: async (seconds: number) => {
         this.seconds = seconds;
         await this.startTimer();
-      },
+      }
     })
   }
 
@@ -59,7 +59,7 @@ export struct TimerView {
       styleMode: ArcButtonStyleMode.EMPHASIZED_LIGHT,
       fontSize: new LengthMetrics(15, LengthUnit.FP),
       shadowEnabled: true,
-      onClick: () => this.onDialogHandler(),
+      onClick: () => this.onDialogHandler()
     })
   }
 
@@ -77,7 +77,7 @@ export struct TimerView {
         this.seconds = 0;
         this.prompt.openToast({
           message: 'Task Executed',
-          duration: 10000,
+          duration: 10000
         }).then((toastId: number) => {
           this.toastId = toastId;
         });
